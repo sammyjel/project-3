@@ -19,3 +19,45 @@ I then used the command sudo apt-get install -y nodejs on the Ubuntu server to c
 In order to verify node installation, I run the commands node -v, sudo node -v, npm -v, or sudo npm -v. The results are shown in the image below:
 
 ![node install verify](./images/node%20version.png)
+
+## Application Code Setup
+
+To start this, I created a directory for Todo project by runnning command sudo mkdir Todo and I confirmed the creation of the Todo directory by running command ls and ls -lih and the details is shown in the image below:
+
+I used the command npm init to initialize the project after verifying the directory and entering the Todo directory so that a new file called package.json could be produced. As a result, the file includes details about the program as well as the dependencies required for its operation. For the output, see the image below.
+
+![To do init](./images/todo%20and%20init.png)
+
+To confirm that package,json file created ls command was excecuted.
+
+![ls packae,json](./images/packkae%20js%20.png)
+
+## INSTALLING EXPRESSJS
+
+To install expressjs, I type  sudo npm install express, and the output is shown in the image below.To install expressjs, I type sudo npm install express, and the output is shown in the image below.
+
+![installin express](./images/install%20express.png)
+
+
+I then used the touch index.js command to create it, and I run the ls command to make sure it had been created. The results are displayed below:
+
+![toch indexjs ](./images/index%20s.png)
+
+The command npm install dotenv is what I used to install the dotenv module. It produced the output shown below..
+
+![dotenv install](./images/doteny%20install.png)
+
+So I opened my browser and entered http://public-address:5000 to see if my configuration was successful after editing my EC2 security group to enable port 5000. and the following output was shown
+
+![port 5000 activation](./images/welcome%20page.png)
+
+## ROUTES 
+
+
+
+
+
+
+
+
+
