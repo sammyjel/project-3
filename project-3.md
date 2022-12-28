@@ -88,6 +88,7 @@ Given that the To-Do app will use Mongodb, a NoSQL database, I constructed a mod
 In order to specify the fields stored in each Mongdb document, the model will also be utilized to define database schema (which describes the logical configuration of all or part of a relational database). How the database is built will be determined by the database schema.
 
 I initially set up mongoose, a Node.js tool that simplifies interacting with mongodb, in order to generate the Schema and a model. So I used the command sudo npm install mongoose to install it.
+
 ![npm install mongoose](./images/sudo%20npm%20install.png)
 
 Following this, I used the command sudo mkdir models to create a new directory for models and the command cd models to navigate to the directory. Using the command sudo touch todo.js, I then created a file inside the directory.
