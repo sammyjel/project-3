@@ -202,7 +202,43 @@ I then launched my server by typing node index.js into the command line, and the
 
 After creating the backend of the program and configuring the database, I have not yet constructed the front end user interface. As a result, I used ReactJS to implement it, and I tested the code using an API development client. Therefore, I used Postman to test the code. The results of the Post request and Get request I did using the Postman application are displayed in the images below. As a result, this shows that the backend component is supporting:
 
+1. the HTTP GET request's presentation of a task list
+2. add a new task, such as an HTTP POST request, to the list
+3. HTTP DELETE request is used to remove an existing task from the list.
 
 
+## FRONTEND CREATION (CONTINUED)
+
+![get api postman](./images/get%20api%20postman.png)
+![post api postman](./images/post%20api%20postman.png)
+
+I developed a user interface for a Web client (browser) so it can communicate with the program through the API once I had all the functionality I needed from the backend and the API. I used the command npx create-react-app client to accomplish this, and the results are shown in the images below:
+
+![create react](./images/create%20%20react.png)
+![create 2](./images/react%202.png)
+
+## Running A Reacting App
+
+Following the installation of the reacting app, I also installed Nodemon and concurrently with the commands npm install concurrently —save-dev and npm install nodemon —save-dev, and the results were seen below, accordingly.
+
+![nodemon apt install](./images/nodemon.png)
+
+Open the package.json file in the todo directory using the vim command, then change the script as follows:
+
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+}
+
+with
+
+"scripts": {
+"start": "node index.js",
+"start-watch": "nodemon index.js",
+"dev": "concurrently \"npm run start-watch\" \"cd client && npm start\""
+},
+
+Instead of including the entire path, such as http://localhost:5000/api/todos, I opened the package.json file in the client directory with vi package.json and added the key value pair "proxy": "http://localhost:5000", ensuring that the application can be accessed on the browser with a url like http://localhost:5000.
+
+After that, I cd back into the Todo directory and type npm run dev. The output was displayed in the image below below.
 
 
